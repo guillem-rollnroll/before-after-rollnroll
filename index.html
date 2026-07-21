@@ -186,17 +186,22 @@
   }
 
   .section-heading {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 32px;
+    text-align: left;
+    margin: 0 0 32px;
     scroll-margin-top: 24px;
   }
 
   .section-title {
-    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    font-size: clamp(1.4rem, 2.7vw, 2.15rem);
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.1;
+  }
+
+  @media (min-width: 861px) {
+    .section-title {
+      white-space: nowrap;
+    }
   }
 
   .section-title .section-num {
@@ -469,7 +474,7 @@
   .post-mock-card {
     position: relative;
     width: 100%;
-    max-width: 300px;
+    max-width: 420px;
     border-radius: 20px;
     border: 1px solid var(--border-subtle);
     background: var(--offblack-2);
@@ -477,47 +482,9 @@
     box-shadow: 0 30px 80px -30px rgba(215,80,173,0.3);
   }
 
-  .pm-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 16px 10px;
-  }
-
-  .pm-avatar {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: var(--brand-gradient-diag);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 0.85rem;
-    color: var(--offblack);
-    flex-shrink: 0;
-  }
-
-  .pm-name {
-    font-size: 0.85rem;
-    font-weight: 700;
-  }
-
-  .pm-meta {
-    font-size: 0.72rem;
-    color: var(--offwhite-dim);
-  }
-
-  .pm-caption {
-    padding: 0 16px 12px;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: var(--offwhite);
-  }
-
   .pm-media {
     position: relative;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 16 / 9;
     background: #000;
     overflow: hidden;
   }
@@ -531,13 +498,13 @@
   .pm-badge {
     position: absolute;
     top: 10px;
-    right: 10px;
+    left: 10px;
     display: inline-flex;
     align-items: center;
     gap: 5px;
     padding: 4px 9px;
     border-radius: 999px;
-    background: rgba(7,7,11,0.6);
+    background: rgba(7,7,11,0.65);
     backdrop-filter: blur(4px);
     font-size: 0.68rem;
     font-weight: 700;
@@ -546,25 +513,47 @@
 
   .pm-badge svg { width: 11px; height: 11px; }
 
-  .pm-stats {
-    display: flex;
-    gap: 20px;
-    padding: 12px 16px;
-    border-top: 1px solid var(--border-subtle);
+  .pm-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(7,7,11,0.8);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--offwhite);
   }
 
-  .pm-stats span {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
+  .yt-info {
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .yt-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .yt-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .yt-meta {
+    font-size: 0.78rem;
     color: var(--offwhite-dim);
   }
 
-  .pm-stats svg {
-    width: 16px;
-    height: 16px;
+  .yt-meta .channel {
+    color: var(--offwhite);
+    font-weight: 600;
   }
 
   .strategy-section .remate {
@@ -778,23 +767,18 @@
         <div class="post-mock">
           <div class="post-mock-glow"></div>
           <div class="post-mock-card">
-            <div class="pm-header">
-              <div class="pm-avatar">R</div>
-              <div>
-                <p class="pm-name">RollnRoll</p>
-                <p class="pm-meta">Publicado en LinkedIn · 2 min</p>
-              </div>
-            </div>
-            <p class="pm-caption">Grabado con el móvil. Editado por RollnRoll. Listo para publicar. 🎬</p>
             <div class="pm-media">
               <!-- SUSTITUIR: colocar despues.mp4 en la raíz del proyecto -->
               <video src="./despues.mp4" muted loop autoplay playsinline></video>
-              <span class="pm-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Vídeo</span>
+              <span class="pm-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>YouTube</span>
+              <span class="pm-duration">2:46</span>
             </div>
-            <div class="pm-stats">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.5 8 2 4.5 5.5 4c2-.3 3.7.8 4.5 2.4C10.8 4.8 12.5 3.7 14.5 4c3.5.5 5 4 3.5 7.7C15.5 16.4 12 21 12 21z"/></svg>482</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-4.06 7.2A8.5 8.5 0 013 11.5 8.5 8.5 0 0121 11.5z"/></svg>36</span>
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>21</span>
+            <div class="yt-info">
+              <img class="yt-avatar" src="./Profile.png" alt="RollnRoll">
+              <div>
+                <p class="yt-title">De vídeo en bruto a contenido listo para publicar</p>
+                <p class="yt-meta"><span class="channel">RollnRoll</span> · 2,4 mil visualizaciones · hace 2 días</p>
+              </div>
             </div>
           </div>
         </div>
