@@ -177,7 +177,7 @@
     padding: 88px 0;
   }
 
-  #produccion {
+  .section-block:first-of-type {
     padding-top: 24px;
   }
 
@@ -620,7 +620,7 @@
     }
 
     .section-block { padding: 64px 0; }
-    #produccion { padding-top: 16px; }
+    .section-block:first-of-type { padding-top: 16px; }
 
     .strategy-grid {
       grid-template-columns: 1fr;
@@ -659,27 +659,83 @@
     <div class="wrap hero-top">
       <img class="logo" src="./rollnroll-logo.svg" alt="RollnRoll">
       <nav class="nav-buttons">
-        <a href="#produccion"><span class="n">01</span> Producción</a>
-        <a href="#estrategia"><span class="n">02</span> Estrategia de contenido</a>
+        <a href="#estrategia"><span class="n">01</span> Estrategia de contenido</a>
+        <a href="#produccion"><span class="n">02</span> Producción</a>
       </nav>
     </div>
     <div class="wrap hero-main">
-      <h1>De la grabación a la estrategia, <span class="gradient-text">todo resuelto</span>.</h1>
+      <h1>Convierte tu conocimiento en vídeos profesionales. <span class="gradient-text">Tan fácil como una videollamada.</span></h1>
       <p>Dos servicios pensados para que tu contenido nunca pare.</p>
     </div>
   </header>
 
   <main>
+  <section class="section-block strategy-section" id="estrategia">
+    <div class="wrap">
+      <div class="section-heading">
+        <h2 class="section-title"><span class="section-num">01.</span> Estrategia de contenido que parte de tus <span class="gradient-text">objetivos de negocio</span>.</h2>
+        <p class="section-lead">Nos encargamos de crear una estrategia de contenido alineada con tus objetivos de negocio: qué publicar, cuándo y por qué.</p>
+      </div>
+
+      <div class="strategy-grid">
+        <div class="strategy-steps">
+          <div class="strategy-step">
+            <span class="step-num">01</span>
+            <div>
+              <h3>Objetivos de negocio</h3>
+              <p>Partimos de qué quiere conseguir tu negocio: más ventas, más reconocimiento y más confianza.</p>
+            </div>
+          </div>
+          <div class="strategy-step">
+            <span class="step-num">02</span>
+            <div>
+              <h3>Estrategia de contenido</h3>
+              <p>Creamos un sistema para que publicar contenido sea fácil y constante.</p>
+            </div>
+          </div>
+          <div class="strategy-step">
+            <span class="step-num">03</span>
+            <div>
+              <h3>Vídeos profesionales</h3>
+              <p>Sin edición, sin equipos y sin complicaciones.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-mock">
+          <div class="post-mock-glow"></div>
+          <div class="post-mock-card">
+            <div class="pm-media">
+              <!-- SUSTITUIR: colocar despues.mp4 en la raíz del proyecto -->
+              <video src="./despues.mp4" muted loop autoplay playsinline></video>
+              <span class="pm-badge"><svg viewBox="0 0 28 20"><rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11.5 6.2l7.5 3.8-7.5 3.8V6.2z" fill="#fff"/></svg>YouTube</span>
+              <span class="pm-duration">2:46</span>
+            </div>
+            <div class="yt-info">
+              <img class="yt-avatar" src="./Profile.png" alt="RollnRoll">
+              <div>
+                <p class="yt-title">De vídeo en bruto a contenido listo para publicar</p>
+                <p class="yt-meta"><span class="channel">RollnRoll</span> · 2,4 mil visualizaciones · hace 2 días</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="remate">Contenido con dirección, <span class="gradient-text">no al azar.</span></p>
+    </div>
+  </section>
+
   <section class="section-block" id="produccion">
     <div class="wrap">
       <div class="section-heading">
-        <h2 class="section-title"><span class="section-num">01.</span> Te hacemos la producción sencilla.</h2>
+        <h2 class="section-title"><span class="section-num">02.</span> Te hacemos la producción sencilla.</h2>
       </div>
 
       <div class="compare-grid">
 
         <div class="col">
-          <span class="tag tag-pre">Preproducción</span>
+          <span class="tag tag-pre">Grabación</span>
           <div class="video-frame">
             <!-- SUSTITUIR: colocar antes.mp4 en la raíz del proyecto -->
             <video src="./antes.mp4" controls playsinline></video>
@@ -706,13 +762,13 @@
 
         <div class="divider">
           <div class="line"></div>
-          <span class="label">Preproducción → Producción</span>
+          <span class="label">Grabación → Postproducción</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="url(#rrGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           <div class="line"></div>
         </div>
 
         <div class="col">
-          <span class="tag tag-pro"><span class="txt">Producción</span></span>
+          <span class="tag tag-pro"><span class="txt">Postproducción</span></span>
           <div class="video-frame after">
             <!-- SUSTITUIR: colocar despues.mp4 en la raíz del proyecto -->
             <video src="./despues.mp4" controls playsinline></video>
@@ -729,62 +785,6 @@
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <section class="section-block strategy-section" id="estrategia">
-    <div class="wrap">
-      <div class="section-heading">
-        <h2 class="section-title"><span class="section-num">02.</span> Estrategia de contenido que parte de tus <span class="gradient-text">objetivos de negocio</span>.</h2>
-        <p class="section-lead">Nos encargamos de crear una estrategia de contenido alineada con tus objetivos de negocio: qué publicar, cuándo y por qué.</p>
-      </div>
-
-      <div class="strategy-grid">
-        <div class="strategy-steps">
-          <div class="strategy-step">
-            <span class="step-num">01</span>
-            <div>
-              <h3>Objetivos de negocio</h3>
-              <p>Partimos de qué quiere conseguir tu marca: más ventas, más alcance, más comunidad.</p>
-            </div>
-          </div>
-          <div class="strategy-step">
-            <span class="step-num">02</span>
-            <div>
-              <h3>Estrategia de contenido</h3>
-              <p>Definimos qué publicar, en qué formato y con qué frecuencia.</p>
-            </div>
-          </div>
-          <div class="strategy-step">
-            <span class="step-num">03</span>
-            <div>
-              <h3>Contenido para redes</h3>
-              <p>Producimos piezas listas para publicar en cada plataforma.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="post-mock">
-          <div class="post-mock-glow"></div>
-          <div class="post-mock-card">
-            <div class="pm-media">
-              <!-- SUSTITUIR: colocar despues.mp4 en la raíz del proyecto -->
-              <video src="./despues.mp4" muted loop autoplay playsinline></video>
-              <span class="pm-badge"><svg viewBox="0 0 28 20"><rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11.5 6.2l7.5 3.8-7.5 3.8V6.2z" fill="#fff"/></svg>YouTube</span>
-              <span class="pm-duration">2:46</span>
-            </div>
-            <div class="yt-info">
-              <img class="yt-avatar" src="./Profile.png" alt="RollnRoll">
-              <div>
-                <p class="yt-title">De vídeo en bruto a contenido listo para publicar</p>
-                <p class="yt-meta"><span class="channel">RollnRoll</span> · 2,4 mil visualizaciones · hace 2 días</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="remate">Contenido con dirección, <span class="gradient-text">no al azar.</span></p>
     </div>
   </section>
   </main>
