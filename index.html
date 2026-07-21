@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RollnRoll — Antes / Después</title>
-<meta name="description" content="De vídeo en bruto a listo para publicar. Descubre lo que la IA de RollnRoll puede hacer con tu contenido.">
+<title>RollnRoll — Producción y estrategia de contenido</title>
+<meta name="description" content="Te hacemos la producción sencilla y creamos la estrategia de contenido alineada con tus objetivos de negocio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
@@ -98,7 +98,7 @@
 
   /* ---------- HERO ---------- */
   .hero {
-    padding: 72px 0 64px;
+    padding: 72px 0 56px;
     text-align: center;
   }
 
@@ -122,15 +122,83 @@
     font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--offwhite-dim);
     max-width: 560px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     font-weight: 500;
   }
 
-  /* ---------- COMPARISON ---------- */
-  .compare-section {
-    padding: 24px 0 100px;
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
+  .nav-buttons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 24px;
+    border-radius: 999px;
+    border: 1px solid var(--border-subtle);
+    background: rgba(255,255,255,0.03);
+    color: var(--offwhite);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 700;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .nav-buttons a:hover {
+    border-color: rgba(215,80,173,0.4);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .nav-buttons a .n {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+  }
+
+  /* ---------- SECTION HEADINGS ---------- */
+  .section-block {
+    padding: 88px 0;
+  }
+
+  .section-block + .section-block {
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 56px;
+    scroll-margin-top: 24px;
+  }
+
+  .section-title {
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .section-title .section-num {
+    color: var(--offwhite-dim);
+    opacity: 0.45;
+    font-weight: 800;
+    margin-right: 0.15em;
+  }
+
+  .section-lead {
+    margin-top: 16px;
+    color: var(--offwhite-dim);
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  /* ---------- COMPARISON (BLOCK 1) ---------- */
   .compare-grid {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -154,9 +222,9 @@
   }
 
   .divider .label {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     color: var(--offwhite-dim);
     text-transform: uppercase;
     white-space: nowrap;
@@ -187,27 +255,27 @@
     text-transform: uppercase;
   }
 
-  .tag-antes {
+  .tag-pre {
     background: rgba(255,255,255,0.05);
     color: var(--offwhite-dim);
     border: 1px solid var(--border-subtle);
   }
 
-  .tag-despues {
+  .tag-pro {
     position: relative;
     background: linear-gradient(var(--offblack), var(--offblack)) padding-box,
                 var(--brand-gradient) border-box;
     border: 1px solid transparent;
   }
 
-  .tag-despues .txt {
+  .tag-pro .txt {
     background: var(--brand-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  .tag-despues::before {
+  .tag-pro::before {
     content: '';
     width: 6px;
     height: 6px;
@@ -269,82 +337,94 @@
     height: 18px;
   }
 
-  /* ---------- PLATO SECTION ---------- */
-  .plato-section {
-    border-top: 1px solid var(--border-subtle);
-    border-bottom: 1px solid var(--border-subtle);
-    padding: 100px 0;
-    text-align: center;
+  /* ---------- MINI PLATÓ BLOCK (inside Preproducción column) ---------- */
+  .plato-mini {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 4px;
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border-subtle);
+    background: rgba(255,255,255,0.02);
   }
 
-  .plato-section h2 {
-    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
+  .plato-mini svg {
+    width: 74px;
+    height: auto;
+    flex-shrink: 0;
   }
 
-  .plato-section h2 .num {
+  .plato-mini-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .plato-mini-title .accent {
     background: var(--brand-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  .plato-section .desc {
-    max-width: 620px;
-    margin: 0 auto 56px;
+  .plato-mini-desc {
     color: var(--offwhite-dim);
-    font-size: 1.05rem;
-    font-weight: 500;
+    font-size: 0.83rem;
+    margin-top: 3px;
+    line-height: 1.45;
   }
 
-  .rig-card {
-    position: relative;
-    max-width: 380px;
-    margin: 0 auto 40px;
-    padding: 36px 20px 28px;
-    border-radius: 24px;
-    border: 1px solid var(--border-subtle);
-    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
-    overflow: hidden;
-  }
-
-  .rig-card .rig-glow {
-    position: absolute;
-    inset: -30%;
-    background: radial-gradient(50% 50% at 50% 35%, rgba(215,80,173,0.20), transparent 65%);
-    filter: blur(30px);
-    pointer-events: none;
-  }
-
-  .rig-card svg {
-    position: relative;
-    width: 100%;
-    max-width: 260px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .rig-legend {
+  /* ---------- STRATEGY FLOW (BLOCK 2) ---------- */
+  .strategy-flow {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 22px;
     flex-wrap: wrap;
     margin-bottom: 56px;
-    color: var(--offwhite-dim);
-    font-size: 0.9rem;
+  }
+
+  .flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 150px;
+    text-align: center;
+  }
+
+  .flow-step .icon-box {
+    width: 68px;
+    height: 68px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flow-step .icon-box svg {
+    width: 28px;
+    height: 28px;
+    color: var(--offwhite);
+  }
+
+  .flow-step span {
+    font-size: 0.88rem;
     font-weight: 600;
-  }
-
-  .rig-legend .dot {
     color: var(--offwhite-dim);
-    opacity: 0.5;
   }
 
-  .plato-section .remate {
+  .flow-arrow {
+    width: 26px;
+    height: 14px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+  }
+
+  .strategy-section .remate {
+    text-align: center;
     font-size: clamp(1.2rem, 2.6vw, 1.6rem);
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -407,13 +487,24 @@
     }
 
     .hero { padding: 56px 0 40px; }
-    .compare-section { padding: 8px 0 72px; }
-    .plato-section { padding: 72px 0; }
+    .section-block { padding: 64px 0; }
+  }
+
+  @media (max-width: 640px) {
+    .strategy-flow {
+      flex-direction: column;
+    }
+
+    .flow-arrow {
+      transform: rotate(90deg);
+      margin-bottom: 0;
+    }
   }
 
   @media (max-width: 480px) {
     .wrap { padding: 0 18px; }
     .hero .logo { margin-bottom: 40px; }
+    .plato-mini { flex-direction: column; text-align: center; }
   }
 </style>
 </head>
@@ -437,34 +528,60 @@
   <header class="hero">
     <div class="wrap">
       <img class="logo" src="https://www.rollnroll.com/logos/rollnroll.svg" alt="RollnRoll">
-      <h1>De vídeo en bruto a <span class="gradient-text">listo para publicar</span>.</h1>
-      <p>La IA de RollnRoll transforma cualquier grabación cruda en contenido profesional, sin edición manual.</p>
+      <h1>De la grabación a la estrategia, <span class="gradient-text">todo resuelto</span>.</h1>
+      <p>Dos servicios pensados para que tu contenido nunca pare: producción con IA y una estrategia alineada con tu negocio.</p>
+      <nav class="nav-buttons">
+        <a href="#produccion"><span class="n">01</span> Producción</a>
+        <a href="#estrategia"><span class="n">02</span> Estrategia de contenido</a>
+      </nav>
     </div>
   </header>
 
   <main>
-  <section class="compare-section">
+  <section class="section-block" id="produccion">
     <div class="wrap">
+      <div class="section-heading">
+        <h2 class="section-title"><span class="section-num">01.</span> Te hacemos la producción sencilla.</h2>
+        <p class="section-lead">Tú grabas con lo que tengas a mano. Nosotros convertimos ese material en vídeo listo para publicar.</p>
+      </div>
+
       <div class="compare-grid">
 
         <div class="col">
-          <span class="tag tag-antes">Antes</span>
+          <span class="tag tag-pre">Preproducción</span>
           <div class="video-frame">
             <!-- SUSTITUIR: colocar antes.mp4 en la raíz del proyecto -->
             <video src="./antes.mp4" controls playsinline></video>
           </div>
-          <p class="col-desc">Vídeo en bruto grabado en sala de oficina. Sin editar, sin procesar.</p>
+          <p class="col-desc">Grabado con RollnRoll en una sala de oficina. Sin editar, sin procesar.</p>
+
+          <div class="plato-mini">
+            <svg viewBox="0 0 260 300" fill="none">
+              <path d="M130 190 L62 288" stroke="rgba(245,244,240,0.45)" stroke-width="5" stroke-linecap="round"/>
+              <path d="M130 190 L198 288" stroke="rgba(245,244,240,0.45)" stroke-width="5" stroke-linecap="round"/>
+              <path d="M130 190 L130 296" stroke="rgba(245,244,240,0.45)" stroke-width="5" stroke-linecap="round"/>
+              <path d="M130 190 L130 120" stroke="rgba(245,244,240,0.45)" stroke-width="5" stroke-linecap="round"/>
+              <rect x="115" y="180" width="30" height="18" rx="5" fill="rgba(245,244,240,0.12)" stroke="rgba(245,244,240,0.45)" stroke-width="2.5"/>
+              <circle cx="130" cy="95" r="78" stroke="url(#rrGrad)" stroke-width="12"/>
+              <rect x="104" y="52" width="52" height="90" rx="11" fill="#111118" stroke="rgba(245,244,240,0.55)" stroke-width="3"/>
+              <rect x="112" y="63" width="36" height="58" rx="2" fill="rgba(255,255,255,0.06)"/>
+            </svg>
+            <div>
+              <p class="plato-mini-title">El plató costó <span class="accent">30€</span></p>
+              <p class="plato-mini-desc">Trípode, aro de luz y un móvil. Nada más — la tecnología hace el resto.</p>
+            </div>
+          </div>
         </div>
 
         <div class="divider">
           <div class="line"></div>
-          <span class="label">Antes → Después</span>
+          <span class="label">Preproducción → Producción</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="url(#rrGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           <div class="line"></div>
         </div>
 
         <div class="col">
-          <span class="tag tag-despues"><span class="txt">Después</span></span>
+          <span class="tag tag-pro"><span class="txt">Producción</span></span>
           <div class="video-frame after">
             <!-- SUSTITUIR: colocar despues.mp4 en la raíz del proyecto -->
             <video src="./despues.mp4" controls playsinline></video>
@@ -484,40 +601,41 @@
     </div>
   </section>
 
-  <section class="plato-section">
+  <section class="section-block strategy-section" id="estrategia">
     <div class="wrap">
-      <h2>El plató costó <span class="num">30€</span></h2>
-      <p class="desc">Este vídeo se grabó únicamente con un trípode, un aro de luz y un móvil. Sin cámara profesional. Sin equipo técnico. Sin estudio. El resto lo hizo RollnRoll.</p>
-
-      <div class="rig-card">
-        <div class="rig-glow"></div>
-        <svg viewBox="0 0 260 300" fill="none">
-          <!-- tripod legs -->
-          <path d="M130 190 L62 288" stroke="rgba(245,244,240,0.45)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M130 190 L198 288" stroke="rgba(245,244,240,0.45)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M130 190 L130 296" stroke="rgba(245,244,240,0.45)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M62 288 L48 296" stroke="rgba(245,244,240,0.45)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M198 288 L212 296" stroke="rgba(245,244,240,0.45)" stroke-width="4" stroke-linecap="round"/>
-          <!-- tripod head / center column -->
-          <path d="M130 190 L130 120" stroke="rgba(245,244,240,0.45)" stroke-width="4" stroke-linecap="round"/>
-          <rect x="118" y="182" width="24" height="14" rx="4" fill="rgba(245,244,240,0.12)" stroke="rgba(245,244,240,0.45)" stroke-width="2"/>
-
-          <!-- ring light -->
-          <circle cx="130" cy="95" r="78" stroke="url(#rrGrad)" stroke-width="10"/>
-          <circle cx="130" cy="95" r="78" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-dasharray="1 11.5" transform="rotate(4 130 95)"/>
-
-          <!-- phone mounted in center -->
-          <rect x="107" y="55" width="46" height="82" rx="10" fill="#111118" stroke="rgba(245,244,240,0.55)" stroke-width="2.5"/>
-          <rect x="114" y="65" width="32" height="54" rx="2" fill="rgba(255,255,255,0.06)"/>
-          <rect x="122" y="127" width="16" height="3" rx="1.5" fill="rgba(245,244,240,0.45)"/>
-        </svg>
+      <div class="section-heading">
+        <h2 class="section-title"><span class="section-num">02.</span> Estrategia de contenido para redes sociales.</h2>
+        <p class="section-lead">Nos encargamos de crear una estrategia de contenido alineada con tus objetivos de negocio: qué publicar, cuándo y por qué.</p>
       </div>
 
-      <div class="rig-legend">
-        <span>Móvil</span><span class="dot">·</span><span>Aro de luz</span><span class="dot">·</span><span>Trípode</span>
+      <div class="strategy-flow">
+        <div class="flow-step">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <span>Objetivos de negocio</span>
+        </div>
+
+        <svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="url(#rrGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h18M14 6l6 6-6 6"/></svg>
+
+        <div class="flow-step">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.3 8.7l-2.1 5-5 2.1 2.1-5z"/></svg>
+          </div>
+          <span>Estrategia de contenido</span>
+        </div>
+
+        <svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="url(#rrGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h18M14 6l6 6-6 6"/></svg>
+
+        <div class="flow-step">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10.5 9.3l4 2.7-4 2.7z" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <span>Contenido para redes</span>
+        </div>
       </div>
 
-      <p class="remate">La tecnología <span class="gradient-text">hace el resto.</span></p>
+      <p class="remate">Contenido con dirección, <span class="gradient-text">no al azar.</span></p>
     </div>
   </section>
   </main>
